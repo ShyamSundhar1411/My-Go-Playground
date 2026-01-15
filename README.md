@@ -5,7 +5,7 @@ core systems and backend engineering concepts, built using Go.
 
 The goal is to develop strong systems intuition by implementing fundamental primitives and well-known system patterns from first principles, with an emphasis on correctness, concurrency, and real-world behavior
 
-## Focus areas:
+## Focus areas
 - Low-level fundamentals (atomics, locks, goroutines, channels)
 - Concurrency problems and deadlock scenarios
 - Rate limiting algorithms (fixed window, sliding window, token bucket, leaky bucket)

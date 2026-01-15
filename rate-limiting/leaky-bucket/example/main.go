@@ -8,10 +8,10 @@ import (
 )
 
 func main() {
-	rc := leakybucket.NewLeakyBucketRateLimiter(5,time.Second)
+	rc := leakybucket.NewLeakyBucketRateLimiter(5, time.Second)
 	fmt.Println("Leaky Bucket Rate Limiter")
 	fmt.Println(rc)
-	for i := range 10{
+	for i := range 10 {
 		if rc.Allow() {
 			fmt.Println("Request", i+1, "allowed")
 		} else {
