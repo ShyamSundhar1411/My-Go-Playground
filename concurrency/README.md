@@ -17,6 +17,12 @@
 
 **Key takeaway:** A concurrent system can simulate parallelism on a single-core machine, but true parallelism requires multiple cores.
 
+---
+
+## Challenges and Considerations
+
+- Synchronization 
+- Deadlocks
 
 ---
 
