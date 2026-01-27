@@ -15,10 +15,10 @@ func main() {
 	fmt.Println("3. Mutual Exclusion")
 	fmt.Println("4. No Preemption")
 	fmt.Print("\nSelect an option: ")
-	
+
 	var choice int
-	_,err := fmt.Scan(&choice)
-	if err != nil{
+	_, err := fmt.Scan(&choice)
+	if err != nil {
 		fmt.Println("Error reading input:", err)
 		os.Exit(1)
 	}
@@ -38,6 +38,5 @@ func main() {
 	default:
 		fmt.Println("Invalid Option")
 	}
-	
 
 }

@@ -19,7 +19,7 @@ func CircularWait() {
 		mu2.Unlock()
 		fmt.Println("Goroutine 1: finished")
 	}()
-	go func(){
+	go func() {
 		mu2.Lock()
 		fmt.Println("Goroutine 2: locked mu1")
 		time.Sleep(time.Second)
@@ -29,5 +29,5 @@ func CircularWait() {
 		mu1.Unlock()
 		fmt.Println("Goroutine 2: finished")
 	}()
-	select{}
+	select {}
 }
