@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/ShyamSundhar1411/rest-api/internal/config"
-	"github.com/ShyamSundhar1411/rest-api/internal/router"
+	"github.com/ShyamSundhar1411/rest-api/internal/api/router"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 	handler := router.New()
 
 	addr := ":" + cfg.Port
-	log.Printf("starting rest-api in %s mode on %s", cfg.Env, addr)
+	log.Printf("starting server in %s mode on %s", cfg.Env, addr)
 
 	if err := http.ListenAndServe(addr, handler); err != nil {
 		log.Fatalf("server stopped: %v", err)

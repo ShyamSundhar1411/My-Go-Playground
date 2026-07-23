@@ -10,8 +10,6 @@ type Config struct {
 	Port string
 }
 
-// Load reads configuration from the environment. Every field has a
-// default so the service runs with zero setup.
 func Load() Config {
 	return Config{
 		Env:  getEnv("APP_ENV", "development"),
