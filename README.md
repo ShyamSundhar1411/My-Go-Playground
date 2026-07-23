@@ -15,14 +15,10 @@ The goal is to develop strong systems intuition by implementing fundamental prim
 
 ## Repository Structure
 
-Each concept or algorithm is implemented in its own module and includes:
+The repo is split into two top-level areas:
 
-- A clear problem statement and theory
-- Idiomatic Go implementations
-- Concurrency and performance considerations
-- Edge cases, failure modes, and tradeoffs
-- Tests and small usage examples where applicable
-
+- **[`concepts/`](./concepts)** — one idea per folder (concurrency, rate-limiting, networking). Each includes a clear problem statement and theory, an idiomatic Go implementation, concurrency and performance considerations, edge cases and tradeoffs, and tests/examples where applicable. These stay small and dependency-free.
+- **[`projects/`](./projects)** — applied, end-to-end services that build on those concepts (e.g. [`rest-api`](./projects/rest-api)), laid out the way a production Go service would be. Each project has its own `go.mod` so its dependencies don't leak into `concepts/`, tied together with the root `go.work`.
 
 This repository is both a personal learning playground and an
 open-source reference for engineers who want to build strong
