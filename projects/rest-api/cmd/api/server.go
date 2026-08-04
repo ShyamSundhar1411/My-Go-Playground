@@ -12,6 +12,7 @@ import (
 func main() {
 	cfg := config.Load()
 	handler := router.New()
+	config.InitDB()
 
 	addr := ":" + cfg.Port
 	log.Printf("starting server in %s mode on %s", cfg.Env, addr)
