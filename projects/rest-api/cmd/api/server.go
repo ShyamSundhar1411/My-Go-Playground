@@ -5,12 +5,18 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ShyamSundhar1411/rest-api/internal/config"
 	"github.com/ShyamSundhar1411/rest-api/internal/api/router"
+	"github.com/ShyamSundhar1411/rest-api/internal/config"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatalf("Failed to load environment variables")
+	}
 	cfg := config.Load()
+	
 	handler := router.New()
 	config.InitDB()
 
