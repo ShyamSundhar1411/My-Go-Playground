@@ -9,7 +9,12 @@ import (
 	"github.com/ShyamSundhar1411/rest-api/internal/config"
 	"github.com/joho/godotenv"
 )
+// @title           School Management System API
+// @version         1.0
+// @description     This is a sample production-ready Go microservice.
 
+
+// @BasePath  /api/v1
 func main() {
 	err := godotenv.Load()
 	if err != nil {

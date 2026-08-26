@@ -12,6 +12,7 @@ import (
 	"github.com/ShyamSundhar1411/rest-api/docs"
 )
 
+
 func New() http.Handler {
 	mux := http.NewServeMux()
 	app_host := os.Getenv("APP_HOST")
