@@ -1,8 +1,23 @@
-basePath: /api/v1
+basePath: /
 info:
   contact: {}
   description: This is a sample production-ready Go microservice.
   title: School Management System API
   version: "1.0"
-paths: {}
+paths:
+  /healthz:
+    get:
+      description: Returns the health status of the API
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Health check
+      tags:
+      - Health
 swagger: "2.0"

@@ -14,7 +14,7 @@ import (
 // @description     This is a sample production-ready Go microservice.
 
 
-// @BasePath  /api/v1
+// @BasePath  /
 func main() {
 	err := godotenv.Load()
 	if err != nil {
